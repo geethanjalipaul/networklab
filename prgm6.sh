@@ -1,11 +1,14 @@
 #!/bin/bash
-echo "Enter the number"
+#shell script for the factorial of a number
+#factorial using while loop
+
+echo "enter the number"
 read num
-sum=0
-while [ $num -gt 0 ]
-do
-	mod=$((num%10)) #it will split each digits
-	sum=$((sum+mod)) # Add each digit to sum
-	num=$((num/10)) #divide num by 10
+
+fact=1
+while [ $num -gt 1 ]
+do 
+	fact=$((fact*num)) #fact=fact*num
+	num=$((num - 1)) #num=num - 1
 done
-echo "sum of digits is" $sum
+echo "Factorial of the number is" $fact

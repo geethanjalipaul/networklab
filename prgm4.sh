@@ -1,16 +1,13 @@
 #!/bin/bash
-echo "Enter num1"
-read num1
-echo "enter num2"
-read num2
-echo "enter num3"
-read num3
-if [ $num1 -gt $num2 ] && [ $num1 -gt $num3 ]
+echo -e "Enter number:\c"
+read n
+for(( i=2; i<=$n/2 ; i++ ))
+do 
+	ans=$((n%i))
+if [ $ans -eq 0 ]
 then
-	echo "greater number is" $num1
-elif [ $num2 -gt $num1 ] && [ $num2 -gt $num3 ]
-then 
-	echo "greater number is " $num2
-else 
-	echo "greater number is" $num3
+	echo "$n is not a prime number"	
+	exit 0
 fi
+done
+echo "$n is a prime number"
