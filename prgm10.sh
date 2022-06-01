@@ -37,5 +37,5 @@ case "$n" in
 2)sub ;;
 3)product ;;
 4)Quotient ;;
-5)Remainder ::
+5)Remainder ;;
 esac
