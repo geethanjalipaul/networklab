@@ -8,13 +8,13 @@ if [ -f $file ]
 then
 echo "$file is an ordinary file"
 if [ -r $file ]
-then 
+then
 echo "$file has read access"
 else
-echi "$file does not have read access"
+echo "$file does not have read access"
 fi
 if [ -w $file ]
-then 
+then
 echo "$file has write permission"
 else
 echo "$file does not have write permission"
@@ -32,7 +32,7 @@ fi
 elif [ -d $file ]
 then
 echo "$file is a directory"
-fi 
+fi
 else
 echo "$file does not exist"
 fi
