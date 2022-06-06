@@ -1,0 +1,309 @@
+Linux Commands
+1.Date command
+date command prints the current date time.
+student@student-Pegatron:~$ date
+Wed May 25 17:42:25 IST 2022
+
+2.cal command
+cal command is used to display a calendar in your shell, by default it will display the
+current month.
+
+3.whoami command
+whoami command will tell you which user account you are using in this system.
+student@student-Pegatron:~$ whoami
+student
+
+4.id command
+id prints real user id, and various other details related to the account.
+student@student-Pegatron:~$ id
+uid=1000(student) gid=1000(student)
+groups=1000(student),4(adm),24(cdrom),27(sudo),30(dip),46(plugdev),113(lpadmin),128(s
+ambashare)
+
+5. pwd command
+pwd command, short for print working directory, will help you to find out the absolute path
+of the current directory.
+student@student-Pegatron:~$ pwd
+/home/student
+
+6.cd command
+short for change directory. This command will help you to change your current
+directory.
+student@student-Pegatron:~$ cd Desktop
+student@student-Pegatron:~/Desktop$ cd ..
+student@student-Pegatron:~$
+
+7. ls command
+ls command to list the files and directories inside any given directory.
+student@student-Pegatron:~$ ls
+cat emp.dat first.sh sallary.sh Templates
+Desktop examples.desktop Music sks test.sh
+Documents fileOperations.sh Pictures SKS to
+Downloads filePermisions.sh Public table.sh Videos
+
+student@student-Pegatron:~$ ls -l
+total 88
+-rw-rw-r-- 1 student student 18 May 25 17:02 cat
+drwxr-xr-x 5 student student 4096 May 18 19:26 Desktop
+drwxr-xr-x 2 student student 4096 Feb 16 17:06 Documents
+drwxr-xr-x 2 student student 4096 May 25 17:38 Downloads
+-rw-rw-r-- 1 student student 193 May 25 17:02 emp.dat
+-rw-r--r-- 1 student student 8980 Oct 29 2021 examples.desktop
+-rwxrwxr-x 1 student student 1034 May 25 16:54 fileOperations.sh
+-rwxrwxr-x 1 student student 631 May 25 16:30 filePermisions.sh
+-rwxrwxr-x 1 student student 116 Apr 29 21:10 first.sh
+drwxr-xr-x 2 student student 4096 Feb 16 17:06 Music
+drwxr-xr-x 2 student student 4096 Feb 16 17:06 Pictures
+drwxr-xr-x 2 student student 4096 Feb 16 17:06 Public
+-rwxrwxr-x 1 student student 824 May 25 17:24 sallary.sh
+drwxrwxr-x 2 student student 4096 May 25 16:33 sks
+drwxrwxr-x 2 student student 4096 Apr 22 19:44 SKS
+-rwxrwxr-x 1 student student 181 May 25 17:42 table.sh
+drwxr-xr-x 2 student student 4096 Feb 16 17:06 Templates
+-rw-rw-r-- 1 student student 15 May 25 16:38 test.sh
+drwxrwxr-x 2 student student 4096 Apr 22 19:40 to
+drwxr-xr-x 2 student student 4096 Feb 16 17:06 Videos
+8. mkdir command
+create new directories using mkdir command.
+student@student-Pegatron:~$ mkdir myFolder
+student@student-Pegatron:~$ dir
+cat emp.dat first.sh Public table.sh Videos
+Desktop examples.desktop Music sallary.sh Templates
+Documents fileOperations.sh myFolder sks test.sh
+Downloads filePermisions.sh Pictures SKS to
+9. rm command
+rm command is used to remove a file, or directory. The -r option is being used to remove in
+a recursive way. With -f
+you force the removal, ignoring errors and never prompt.
+student@student-Pegatron:~$ rm first.sh
+10.Copying a file using cp command
+cp command to copy a file in the Linux shell.
+hello.txt to hello2.txt.
+$ cp hello.txt hello2.txt
+11. Renaming or moving a file
+The mv command is used to rename or move a file or directory.
+
+student@student-OptiPlex-3050:~$ mv fact.c factNew.c
+
+12. tree command
+tree command prints the directory structure in a nice visual tree design way.
+13. Using &gt; to redirect output to a file
+to redirect the output of one command to a file, if the file exists this will remove the old
+content and only
+keep the input. We can use &gt;&gt; to append to a file, means it will keep all the old content,
+and it will add the new input
+to the end of the file.
+student@student-OptiPlex-3050:~$ ls &gt; test1
+student@student-OptiPlex-3050:~$ cat test1
+student@student-OptiPlex-3050:~$ cat test1
+abc.c
+addfun.sh
+a.out
+Desktop
+Documents
+Downloads
+examples.desktop
+factNew.c
+fibnocci.c
+fibnocci.cpp
+first n .c
+fs.cpp
+function.sh
+funNew.sh
+fun.sh
+gracemark.sh
+mul.cpp
+Music
+n.cpp
+parameter.sh
+Pictures
+prime.cpp
+Public
+SKS
+Templates
+test1
+Untitled Document
+Videos
+student@student-OptiPlex-3050:~$ date &gt;&gt; test1
+student@student-OptiPlex-3050:~$ cat test1
+abc.c
+addfun.sh
+a.out
+Desktop
+Documents
+
+Downloads
+examples.desktop
+factNew.c
+fibnocci.c
+fibnocci.cpp
+first n .c
+fs.cpp
+function.sh
+funNew.sh
+fun.sh
+gracemark.sh
+mul.cpp
+Music
+n.cpp
+parameter.sh
+Pictures
+prime.cpp
+Public
+SKS
+Templates
+test1
+Untitled Document
+Videos
+Wed May 25 20:06:11 IST 2022
+14. man pages
+man shows the system’s manual pages. This is the command we use to view the help
+document (manual page) for any command.
+The general syntax is man section command
+student@student-OptiPlex-3050:~$ man ls
+LS(1) User Commands LS(1)
+NAME
+ls - list directory contents
+SYNOPSIS
+ls [OPTION]... [FILE]...
+DESCRIPTION
+List information about the FILEs (the current directory by default).
+Sort entries alphabetically if none of -cftuvSUX nor --sort is speci‐
+fied.
+Mandatory arguments to long options are mandatory for short options
+too.
+-a, --all
+do not ignore entries starting with .
+-A, --almost-all
+do not list implied . and ..
+
+--author
+with -l, print the author of each file
+-b, --escape
+print C-style escapes for nongraphic characters
+--block-size=SIZE
+scale sizes by SIZE before printing them; e.g., &#39;--block-size=M&#39;
+prints sizes in units of 1,048,576 bytes; see SIZE format below
+-B, --ignore-backups
+do not list implied entries ending with ~
+-c with -lt: sort by, and show, ctime (time of last modification of
+file status information); with -l: show ctime and sort by name;
+otherwise: sort by ctime, newest first
+-C list entries by columns
+--color[=WHEN]
+colorize the output; WHEN can be &#39;always&#39; (default if omitted),
+&#39;auto&#39;, or &#39;never&#39;; more info below
+-d, --directory
+list directories themselves, not their contents
+15. Open File Using cat Command
+cat&lt;file name&gt;
+student@student-OptiPlex-3050:~$ cat prime.cpp
+
+16. tar command
+Syntax: 
+tar [options] [archive-file] [file or directory to be archived]
+Creating an uncompressed tar Archive using option -cvf
+student@student-OptiPlex-3050:~$ tar cvf myFile.tar *.c
+abc.c
+factNew.c
+fibnocci.c
+first n .c
+Extracting files from Archive using option -xvf
+student@student-OptiPlex-3050:~$ tar xvf myFile.tar
+abc.c
+factNew.c
+fibnocci.c
+
+first n .c
+17. Grep Command
+The grep command is a filter that is used to search for lines matching a specified pattern
+and print the matching lines to standard output.
+grep without pipe
+grep&lt;searchWord&gt;&lt;filename&gt;
+student@student-chmod - To change access permissions, change mode.OptiPlex-
+3050:~$ grep .c test1
+abc.c
+Documents
+factNew.c
+fibnocci.c
+fibnocci.cpp
+first n .c
+fs.cpp
+function.sh
+gracemark.sh
+mul.cpp
+Music
+n.cpp
+Pictures
+prime.cpp
+Public
+Untitled Document
+grep with pipe
+command | grep&lt;searchWord&gt;
+student@student-OptiPlex-3050:~$ cat fun.sh | grep echo
+echo &quot;Result is: &quot; $(( $num1 + $num2 ))
+echo &quot;The Sum of $num1 and $num2 is `expr $num1 + $num2`&quot;
+echo &quot;Enter the First Number&quot;
+echo &quot;Enter the Second Number&quot;
+echo &quot;Select a Option&quot;
+18. chmod - To change access permissions, change mode.
+Linux File Permissions
+Before going further, let’s explain the basic Linux permissions model.
+In Linux, each file is associated with an owner and a group and assigned with permission
+access rights for three different classes of users:
+ The file owner.
+ The group members.
+ Others (everybody else).
+
+EXAMPLES
+Read by owner only
+$ chmod 400 sample.txt
+Read by group only
+$ chmod 040 sample.txt
+Read by anyone
+$ chmod 004 sample.txt
+Write by owner only
+$ chmod 200 sample.txt
+Write by group only
+$ chmod 020 sample.txt
+Write by anyone
+$ chmod 002 sample.txt
+Execute by owner only
+$ chmod 100 sample.txt
+Execute by group only
+$ chmod 010 sample.txt
+Execute by anyone
+$ chmod 001 sample.txt
+Allow read permission to owner and group and anyone.
+$ chmod 444 sample.txt
+Allow everyone to read, write, and execute file.
+$ chmod 777 sample.txt
+
+Networking commands
+19. Finding the IP address
+student@student-OptiPlex-3050:~$ ip addr show
+1: lo: &lt;LOOPBACK,UP,LOWER_UP&gt; mtu 65536 qdisc noqueue state UNKNOWN group
+default qlen 1
+link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+inet 127.0.0.1/8 scope host lo
+valid_lft forever preferred_lft forever
+inet6 ::1/128 scope host
+valid_lft forever preferred_lft forever
+
+2: enp1s0: &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt; mtu 1500 qdisc pfifo_fast state
+UP group default qlen 1000
+link/ether 8c:ec:4b:69:6a:01 brd ff:ff:ff:ff:ff:ff
+inet 10.0.66.2/8 brd 10.255.255.255 scope global enp1s0
+valid_lft forever preferred_lft forever
+inet6 fe80::bd2:6390:8223:9804/64 scope link
+valid_lft forever preferred_lft forever
+20. ping command
+ping is simple way to find out if you are connected to the Internet or not.
+student@student-OptiPlex-3050:~$ ping google.com
+PING google.com (142.250.182.78) 56(84) bytes of data.
+64 bytes from maa05s20-in-f14.1e100.net (142.250.182.78): icmp_seq=1 ttl=117 time=308
+ms
+64 bytes from maa05s20-in-f14.1e100.net (142.250.182.78): icmp_seq=2 ttl=117 time=310
+ms
+64 bytes from maa05s20-in-f14.1e100.net (142.250.182.78): icmp_seq=3 ttl=117 time=310
+ms
